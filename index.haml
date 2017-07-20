@@ -1,0 +1,37 @@
+!!!5
+%html{class:"no-js", lang:"es"}
+  %head
+    %meta{charset:"utf-8"}
+    %title Evolution | La evolucion en recurso humano
+    %meta{name:"description", content:"Evoluciona con nosotros como el mejor recurso humano de la era moderna."}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %link{href:"https://fonts.googleapis.com/css?family=Vollkorn", rel:"stylesheet"}>
+    %link{rel:"stylesheet", href:"css/normalize.css"}
+    %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
+    %link{rel:"stylesheet", href:"css/style.css"}
+    %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+  %body
+    ="<!--[if lte IE 9]>"
+    %p{class:"browserupgrade"}
+      You are using an
+      %strong outdated browser. Please
+      %a{href:"https://browsehappy.com/"}
+        upgrade your browser</a> to improve your experience and security.
+    ="<![endif]-->"
+    .video-container
+      %video{autoplay:true, loop:true, width:"1280", height:"720", poster:"./videos/images/evolution.jpg"}
+        %source{src:"./videos/mp4/evolution.mp4", type:"video/mp4"}
+        %source{src:"./videos/webm/evolution.webm", type:"video/webm"}
+    .row.full-height.middle-xs.center-xs.relative.up
+      .col-xs-12
+        .box.red-text
+          %img{src:"./img/evolution.svg", width:"200"}
+          %h1.fuente.title.no-margin Headhunting & Consulting
+          %p.sub-title Experiencia en el manejo de recursos humanos
+      %nav.fixed.top.right#navigation
+        %ul
+          %li Inicio
+          %li Nosotros
+          %li Headhunting
+          %li Recursos humanos
+          %li Contacto
