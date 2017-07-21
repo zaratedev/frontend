@@ -98,6 +98,9 @@ textarea {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.navigation li {
+  padding: 5px 10px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -115,6 +118,9 @@ textarea {
 
 .sub-title {
   font-size: 2em; }
+
+.midium, .navigation li {
+  font-size: 1.5em; }
 
 .relative {
   position: relative; }
