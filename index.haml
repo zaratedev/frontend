@@ -5,7 +5,7 @@
     %title Evolution | La evolucion en recurso humano
     %meta{name:"description", content:"Evoluciona con nosotros como el mejor recurso humano de la era moderna."}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
-    %link{href:"https://fonts.googleapis.com/css?family=Vollkorn", rel:"stylesheet"}>
+    %link{href:"https://fonts.googleapis.com/css?family=Vollkorn", rel:"stylesheet"}
     %link{rel:"stylesheet", href:"css/normalize.css"}
     %link{rel:"stylesheet", href:"css/bootstrap.css"}
     %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
@@ -30,9 +30,10 @@
           %h1.fuente.title.no-margin Headhunting & Consulting
           %p.sub-title Experiencia en el manejo de recursos humanos
       %nav.fixed.top.right.red-text.navigation#navigation
+        -menu = ["Inicio", "Nosotros", "Headhunting", "Recursos humanos", "Contacto"]
         %ul.list-inline
-          %li Inicio
-          %li Nosotros
-          %li Headhunting
-          %li Recursos humanos
-          %li Contacto
+          -menu.each do |item|
+            %li
+              %a{}= item
+      .absolute.midium.black.large-padding.bottom.white-text.full-width#description
+        Talento adecuado en el puesto correcto

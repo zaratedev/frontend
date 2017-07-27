@@ -99,13 +99,28 @@ textarea {
     transform: translate(-50%, -50%); }
 
 .navigation li {
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .navigation li a {
+    color: #861313;
+    cursor: pointer; }
+    .navigation li a:hover {
+      text-decoration: none;
+      color: white; }
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 .no-margin {
   margin: 0px; }
+
+.black {
+  background-color: #222; }
+
+.white-text {
+  color: white; }
 
 .red-text {
   color: #861313; }
@@ -122,8 +137,17 @@ textarea {
 .midium, .navigation li {
   font-size: 1.5em; }
 
+.large-padding {
+  padding: 10px 20px; }
+
 .relative {
   position: relative; }
+
+.absolute {
+  position: absolute; }
+
+.bottom {
+  bottom: 0px; }
 
 .top {
   top: 1em; }
@@ -140,8 +164,14 @@ textarea {
 .full-height {
   height: 100%; }
 
+.full-width {
+  width: 100%; }
+
 .row {
   margin: 0; }
+
+#description {
+  left: 0px; }
 
 /*
  * Hide visually and from screen readers

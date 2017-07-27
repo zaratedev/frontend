@@ -118,6 +118,15 @@ textarea {
   li{
     @extend .midium;
     padding: 5px 10px;
+    transition: all 0.4s;
+    a{
+      color: rgb(134,19,19);
+      cursor: pointer;
+      &:hover{
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
 
@@ -139,6 +148,12 @@ textarea {
    .no-margin{
      margin: 0px;
    }
+   .black{
+     background-color: #222;
+   }
+   .white-text{
+     color: white;
+   }
    .red-text{
      color: rgb(134,19,19);
    }
@@ -155,8 +170,17 @@ textarea {
    .midium{
      font-size: 1.5em;
    }
+   .large-padding{
+     padding: 10px 20px;
+   }
    .relative{
      position: relative;
+   }
+   .absolute{
+     position: absolute;
+   }
+   .bottom{
+     bottom: 0px;
    }
    .top{
      top: 1em;
@@ -173,9 +197,16 @@ textarea {
 .full-height{
   height: 100%;
 }
+.full-width
+{
+  width: 100%;
+}
 .row
 {
   margin: 0;
+}
+#description{
+  left:0px;
 }
 /*
  * Hide visually and from screen readers
