@@ -35,5 +35,21 @@
           -menu.each do |item|
             %li
               %a{}= item
-      .absolute.midium.black.large-padding.bottom.white-text.full-width#description
-        Talento adecuado en el puesto correcto
+      .absolute.black.large-padding.white-text.full-width#description
+        .row.middle-xs.center-xs
+          .col-xs-7.col-sm-6.midium
+            Talento adecuado en el puesto correcto
+          .col-xs.hidden#sticky-navigation
+            .box
+              %nav.text-rigth.navigation
+                %ul.list-inline
+                  -menu.each do |item|
+                    %li
+                      %a{}= item
+    .full-height
+
+    %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
+
+    %script
+      window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.4.min.js'><\/script>")
+    %script{src:"js/main.js"}

@@ -110,6 +110,15 @@ textarea {
       text-decoration: none;
       color: white; }
 
+#description ul {
+  margin: 0px; }
+
+#description.absolute {
+  bottom: 0px; }
+
+#description.fixed {
+  top: 0px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
