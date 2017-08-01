@@ -2,20 +2,21 @@
 
 !function() {
     function i() {
-        $("#description").addClass("fixed").removeClass("absolute"), $("#navigation").addClass("hidden"), 
-        $("#sticky-navigation").removeClass("hidden");
+        $("#description").addClass("fixed").removeClass("absolute"), $("#navigation").slideUp(), 
+        $("#sticky-navigation").slideDown("fast");
     }
     function n() {
-        $("#description").removeClass("fixed").addClass("absolute"), $("#navigation").removeClass("hidden"), 
-        $("#sticky-navigation").addClass("hidden");
+        $("#description").removeClass("fixed").addClass("absolute"), $("#navigation").slideDown("fast"), 
+        $("#sticky-navigation").slideUp("fast");
     }
     function s() {
         var i = $("#description").height();
-        return $(window).scrollTop() > $(window).height() - 1.5 * i;
+        return $(window).scrollTop() > $(window).height() - 2 * i;
     }
-    var a = !1;
+    var t = !1;
+    $("#sticky-navigation").removeClass("hidden"), $("#sticky-navigation").slideUp(0), 
     $(window).scroll(function() {
-        var d = s();
-        d && !a && (a = !0, i()), !d && a && (a = !1, n());
+        var a = s();
+        a && !t && (t = !0, i()), !a && t && (t = !1, n());
     });
 }();
