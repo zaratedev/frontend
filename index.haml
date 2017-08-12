@@ -46,8 +46,25 @@
                   -menu.each do |item|
                     %li
                       %a{}= item
-    .full-height
-
+    .text-center.relative#menu
+      .absolute.white#menu-title
+        %h2.fuente.titile Evolution
+      -menu_photos = [{name: "Capacitación",image: "club-sandwich",pricing: "10.00"},
+      {name:"Outplacement",image: "hamburger",pricing: "10.00"},
+      {name: "Administracion de cambio",image: "hot-cakes",pricing: "10.00"},
+      {name: "Evaluacion clima laboral",image: "panini",pricing: "10.00"},
+      {name: "Reingenieria de la organizacion",image: "papas",pricing: "10.00"},
+      {name: "Evaluacion 360°",image: "combo",pricing: "10.00"},
+      {name: "Call Center",image: "club-sandwich",pricing: "10.00"},
+      {name: "Mensajeria especializada",image: "hamburger",pricing: "10.00"}]
+      .row
+        -menu_photos.each do |foto|
+          .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(img/food/#{foto[:image]}-thumb.jpg)"}
+            .screen
+              .row.middle-xs.full-height
+                .col-lg-12.white-text
+                  %h3.fuente= foto[:name]
+                  %p.no-margin= foto[:pricing]
     %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
 
     %script
