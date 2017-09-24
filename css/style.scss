@@ -167,7 +167,24 @@ textarea {
   left: calc(50% - 150px);
 }
 
-
+#gallery{
+  width: 100%;
+  overflow-x: hidden;
+  .inner {
+    white-space: nowrap;
+    position: relative;
+    left: 0%;
+    transition: left 2s;
+  }
+  .image {
+    display: inline-block;
+    margin-right: -4px;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 
 

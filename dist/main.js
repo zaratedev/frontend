@@ -9,14 +9,18 @@
         $("#description").removeClass("fixed").addClass("absolute"), $("#navigation").slideDown("fast"), 
         $("#sticky-navigation").slideUp("fast");
     }
-    function s() {
+    function t() {
         var i = $("#description").height();
         return $(window).scrollTop() > $(window).height() - 2 * i;
     }
-    var t = !1;
+    var a = !1, s = 0, e = $("[data-name='image-counter']").attr("content");
     $("#sticky-navigation").removeClass("hidden"), $("#sticky-navigation").slideUp(0), 
-    $(window).scroll(function() {
-        var a = s();
-        a && !t && (t = !0, i()), !a && t && (t = !1, n());
+    setInterval(function() {
+        s < e ? s++ : s = 0, $("#gallery .inner").css({
+            left: "-" + 100 * s + "%"
+        });
+    }, 3e3), $(window).scroll(function() {
+        var s = t();
+        s && !a && (a = !0, i()), !s && a && (a = !1, n());
     });
 }();

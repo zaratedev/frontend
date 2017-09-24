@@ -1,3 +1,4 @@
+-gallery_images = ["club-sandwich.jpg", "papas.jpg", "hamburger.jpg", "panini.jpg", "club-sandwich.jpg", "papas.jpg"]
 !!!5
 %html{class:"no-js", lang:"es"}
   %head
@@ -5,6 +6,7 @@
     %title Evolution | La evolucion en recurso humano
     %meta{name:"description", content:"Evoluciona con nosotros como el mejor recurso humano de la era moderna."}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+    %meta{:"data-name" => "image-counter", content:"#{gallery_images.size - 1}"}
     %link{href:"https://fonts.googleapis.com/css?family=Vollkorn", rel:"stylesheet"}
     %link{rel:"stylesheet", href:"css/normalize.css"}
     %link{rel:"stylesheet", href:"css/bootstrap.css"}
@@ -65,6 +67,11 @@
                 .col-lg-12.white-text
                   %h3.fuente= foto[:name]
                   %p.no-margin= foto[:pricing]
+    #gallery
+      .inner
+        -gallery_images.each do |image|
+          .image{style:"background-image:url(img/food/#{image})"}
+
     %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
 
     %script
