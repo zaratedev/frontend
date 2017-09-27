@@ -198,6 +198,9 @@ textarea {
    .no-margin{
      margin: 0px;
    }
+   .card {
+
+   }
    .white{
      background-color: white;
    }
@@ -207,12 +210,21 @@ textarea {
    .white-text{
      color: white;
    }
+   .black-text{
+     color: black;
+   }
    .red-text{
      color: rgb(134,19,19);
+   }
+   .slim {
+     font-weight: 200
    }
    .fuente
    {
      font-family: 'Vollkorn', serif;
+   }
+   .dancing-script{
+     font-family: 'Dancing Script', cursive;
    }
    .title{
      font-size: 4em;

@@ -8,6 +8,7 @@
     %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
     %meta{:"data-name" => "image-counter", content:"#{gallery_images.size - 1}"}
     %link{href:"https://fonts.googleapis.com/css?family=Vollkorn", rel:"stylesheet"}
+    %link{href:"https://fonts.googleapis.com/css?family=Dancing+Script", rel:"stylesheet"}
     %link{rel:"stylesheet", href:"css/normalize.css"}
     %link{rel:"stylesheet", href:"css/bootstrap.css"}
     %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
@@ -71,6 +72,12 @@
       .inner
         -gallery_images.each do |image|
           .image{style:"background-image:url(img/food/#{image})"}
+    .container
+      .card.white.black-text.text-center
+        %h3.medium.slim
+          En
+          %strong.dancing-script.medium Evolution el factor más valioso eres
+          %strong.medium tú.
 
     %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
 
