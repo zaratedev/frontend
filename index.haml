@@ -73,14 +73,40 @@
         -gallery_images.each do |image|
           .image{style:"background-image:url(img/food/#{image})"}
     .container
-      .card.white.black-text.text-center
+      .card.white.black-text.text-center.relative
         %h3.medium.slim
           En
-          %strong.dancing-script.medium Evolution el factor más valioso eres
-          %strong.medium tú.
-
+          %strong.dancing-script.medium Evolution
+          el factor más valioso eres
+          %strong.dancing-script.medium tú.
+        %p.top-space
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          %strong.dancing-script.medium Evolution Human Capital
+    .black.white-text.full-height#contact
+      .row.middle-xs.full-height
+        .col-xs-12
+          .box
+            %form{action:"https://formspree.io/zaratedev@gmail.com", method:"POST", id:"form_contact"}
+              .row.center-xs
+                .col-xs-2.col-md-1
+                  .box
+                .col-xs-5
+                  .box
+                    %input{type:"email", name:"email", placeholder:"Correo electrónico"}
+                    %input{type:"text", name:"name", placeholder:"Nombre"}
+                    %textarea{name:"body", placeholder:"Mensaje"}
+                    .div
+                      %button{type:"submit", class:"btn btn-success"}
+                        Enviar
     %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
 
     %script
       window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.4.min.js'><\/script>")
+    %script{src:"js/form_object.js"}
     %script{src:"js/main.js"}

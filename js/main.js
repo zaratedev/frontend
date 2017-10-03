@@ -4,6 +4,15 @@
   let currentPosition = 0
   const imageCounter = $("[data-name='image-counter']").attr("content")
 
+  const email = 'zaratedev@gmail.com'
+  $("#form_contact").on("submit", function(ev){
+    ev.preventDefault()
+
+    sendForm($(this))
+
+    return false
+  })
+
   $("#sticky-navigation").removeClass("hidden")
   $("#sticky-navigation").slideUp(0)
 
@@ -54,5 +63,18 @@
     const descriptionHeight = $description.height()
 
     return $(window).scrollTop() > $(window).height() - (descriptionHeight * 2)
+  }
+
+  function sendForm($form) {
+    //console.log($form.formObject());
+    $.ajax({
+      url: $form.attr("action"),
+      method: "POST",
+      data: $form.formObject(),
+      dataType: "json",
+      success: function () {
+        alert("sucess");
+      }
+    })
   }
 })()
