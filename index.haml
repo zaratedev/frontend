@@ -14,6 +14,7 @@
     %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"}
     %link{rel:"stylesheet", href:"css/style.css"}
     %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+    %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css"}
   %body
     ="<!--[if lte IE 9]>"
     %p{class:"browserupgrade"}
@@ -92,21 +93,32 @@
       .row.middle-xs.full-height
         .col-xs-12
           .box
-            %form{action:"https://formspree.io/zaratedev@gmail.com", method:"POST", id:"form_contact"}
+            %form{action:"https://formspree.io/zaratedev@gmail.com", method:"POST", id:"form_contact",class:"step-form"}
               .row.center-xs
                 .col-xs-2.col-md-1
-                  .box
+                  .box.text-rigth
+                    -3.times do |i|
+                      -if i == 0
+                        .path-step.active
+                      -else
+                        .path-step
+
                 .col-xs-5
                   .box
-                    %input{type:"email", name:"email", placeholder:"Correo electrónico"}
-                    %input{type:"text", name:"name", placeholder:"Nombre"}
-                    %textarea{name:"body", placeholder:"Mensaje"}
+                    %fieldset.step.active
+                      %input{type:"email", name:"email", placeholder:"Correo electrónico",class:"input",required:true}
+                    %fieldset.step
+                      %input{type:"text", name:"name", placeholder:"Nombre",class:"input",required:true}
+                    %fieldset.step
+                      %textarea{name:"body", placeholder:"Mensaje",class:"input",required:true}
                     .div
                       %button{type:"submit", class:"btn btn-success"}
                         Enviar
     %script{src:"http://code.jquery.com/jquery-3.0.0.js", integrity:"sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=", crossorigin:"anonymous"}
 
+    %script{src:"https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"}
     %script
       window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.4.min.js'><\/script>")
     %script{src:"js/form_object.js"}
     %script{src:"js/main.js"}
+    %script{src:"dist/steps.js"}

@@ -13,6 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css" rel="stylesheet">
   </head>
   <body>
     <!--[if lte IE 9]>
@@ -209,16 +210,26 @@
       <div class="row middle-xs full-height">
         <div class="col-xs-12">
           <div class="box">
-            <form action="https://formspree.io/zaratedev@gmail.com" id="form_contact" method="POST">
+            <form action="https://formspree.io/zaratedev@gmail.com" class="step-form" id="form_contact" method="POST">
               <div class="row center-xs">
                 <div class="col-xs-2 col-md-1">
-                  <div class="box"></div>
+                  <div class="box text-rigth">
+                    <div class="path-step active"></div>
+                    <div class="path-step"></div>
+                    <div class="path-step"></div>
+                  </div>
                 </div>
                 <div class="col-xs-5">
                   <div class="box">
-                    <input name="email" placeholder="Correo electrónico" type="email">
-                    <input name="name" placeholder="Nombre" type="text">
-                    <textarea name="body" placeholder="Mensaje"></textarea>
+                    <fieldset class="step active">
+                      <input class="input" name="email" placeholder="Correo electrónico" required type="email">
+                    </fieldset>
+                    <fieldset class="step">
+                      <input class="input" name="name" placeholder="Nombre" required type="text">
+                    </fieldset>
+                    <fieldset class="step">
+                      <textarea class="input" name="body" placeholder="Mensaje" required></textarea>
+                    </fieldset>
                     <div class="div">
                       <button class="btn btn-success" type="submit">
                         Enviar
@@ -233,10 +244,12 @@
       </div>
     </div>
     <script crossorigin="anonymous" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" src="http://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
     <script>
       window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.4.min.js'><\/script>")
     </script>
     <script src="js/form_object.js"></script>
     <script src="js/main.js"></script>
+    <script src="dist/steps.js"></script>
   </body>
 </html>
