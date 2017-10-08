@@ -230,11 +230,6 @@
                     <fieldset class="step">
                       <textarea class="input" name="body" placeholder="Mensaje" required></textarea>
                     </fieldset>
-                    <div class="div">
-                      <button class="btn btn-success" type="submit">
-                        Enviar
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -243,11 +238,17 @@
         </div>
       </div>
     </div>
+    <div id="location">
+      <div id="map"></div>
+      <div class="black large-padding white-text text-center medium" id="message"></div>
+    </div>
     <script crossorigin="anonymous" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" src="http://code.jquery.com/jquery-3.0.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.js"></script>
     <script>
       window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.4.min.js'><\/script>")
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClXr8qmshr7PoGlqA03CyPCMYTq06DUjM"></script>
+    <script src="js/maps.js"></script>
     <script src="js/form_object.js"></script>
     <script src="js/main.js"></script>
     <script src="dist/steps.js"></script>
