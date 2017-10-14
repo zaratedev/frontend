@@ -1,3 +1,7 @@
+if ( navigator.serviceWorker) {
+  navigator.serviceWorker.register("sw.js");
+}
+
 ;(function() {
 
   let sticky = false
@@ -65,5 +69,5 @@
     return $(window).scrollTop() > $(window).height() - (descriptionHeight * 2)
   }
 
-  
+
 })()

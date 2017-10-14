@@ -1,0 +1,26 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif, Arial, Helvetica-Nue, Roboto;
+  background-color: #eee;
+}
+
+#message {
+  padding: 10px 15px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  margin: 0px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0 , 0, 0, 0.5);
+  padding: 1em;
+}
+
+#map img {
+  max-width: 100%
+}

@@ -192,9 +192,9 @@ textarea {
 .step-form .step {
   max-height: 0px;
   overflow: hidden;
-  -webkit-transition: all 2s;
-  -o-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
   margin: 0px; }
   .step-form .step.active {
     padding: 1em 0.5em;
