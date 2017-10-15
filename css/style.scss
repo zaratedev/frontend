@@ -162,7 +162,7 @@ textarea {
 }
 #menu-title{
   width: 300px;
-  z-index: 5;
+  z-index: 4;
   top: calc(50% - 2.5em);
   left: calc(50% - 150px);
 }
@@ -248,6 +248,9 @@ textarea {
   height: 500px;
 }
 
+#menu-opener {
+  display: none;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -419,6 +422,57 @@ textarea {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+
+@media only screen and (max-height: 600px)
+{
+  #contact, .container .card {
+    margin-top: -15%;
+  }
+}
+
+@media only screen and (max-width: 960px){
+  #navigation {
+    display: none !important;
+  }
+  #menu-opener {
+    display: block;
+  }
+  .path-step {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  #responsive-nav {
+    ul {
+      position: absolute;
+      width: 100%;
+      font-size: 1.5em;
+      top: 80px;
+      background-color: #222;
+      left: 0px;
+      text-align: center;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.4s;
+      &.active {
+        max-height: 80vh;
+      }
+      li{
+        display: block;
+        margin-top: 1em;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px){
+  #responsive-nav {
+    ul {
+      top: 95px;
+    }
+  }
 }
 
 @media print,

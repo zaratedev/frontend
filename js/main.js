@@ -20,6 +20,12 @@ if ( navigator.serviceWorker) {
   $("#sticky-navigation").removeClass("hidden")
   $("#sticky-navigation").slideUp(0)
 
+  $("#menu-opener").on("click", function () {
+    $("#responsive-nav ul").toggleClass("active");
+    $(this).toggleClass("fa-bars")
+  })
+
+  $(".menu-link").on("click", toogleNav)
   setInterval(()=> {
 
     if (currentPosition < imageCounter) {
@@ -54,6 +60,11 @@ if ( navigator.serviceWorker) {
     //$("#sticky-navigation").removeClass("hidden")
     $("#navigation").slideUp()
     $("#sticky-navigation").slideDown("fast")
+  }
+
+  function toogleNav() {
+    $("#responsive-nav ul").toggleClass("active");
+    $("#menu-opener").toggleClass("fa-bars")
   }
 
   function unStickyNavigation(){
